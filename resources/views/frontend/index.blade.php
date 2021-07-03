@@ -98,7 +98,7 @@
 				<!-- Single Banner  -->
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="single-banner">
-						<img src="{{URL::TO('frontend/images/mini-banner1.jpg')}}" alt="#">
+						<img src="{{URL::TO('public/frontend/images/mini-banner1.jpg')}}" alt="#">
 						<div class="content">
 							<p>Man's Collectons</p>
 							<h3>Summer travel <br> collection</h3>
@@ -110,7 +110,7 @@
 				<!-- Single Banner  -->
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="single-banner">
-						<img src="{{URL::TO('frontend/images/mini-banner2.jpg')}}" alt="#">
+						<img src="{{URL::TO('public/frontend/images/mini-banner2.jpg')}}" alt="#">
 						<div class="content">
 							<p>Bag Collectons</p>
 							<h3>Awesome Bag <br> 2020</h3>
@@ -122,7 +122,7 @@
 				<!-- Single Banner  -->
 				<div class="col-lg-4 col-12">
 					<div class="single-banner tab-height">
-						<img src="{{URL::TO('frontend/images/mini-banner3.jpg')}}" alt="#">
+						<img src="{{URL::TO('public/frontend/images/mini-banner3.jpg')}}" alt="#">
 						<div class="content">
 							<p>Flash Sale</p>
 							<h3>Mid Season <br> Up to <span>40%</span> Off</h3>
@@ -182,7 +182,7 @@
                                                         <div class="product-img">
                                                             @foreach($product->images as $image)
                                                             <a href="{{ route('products.show', $product->product_slug) }}">
-                                                                <img class="default-img" style="width:550px; height:350px;" src="{{asset('backend/img/products/'. $image->image)}}" alt="{{ $product->product_slug }}">
+                                                                <img class="default-img" style="width:550px; height:350px;" src="{{asset('public/backend/img/products/'. $image->image)}}" alt="{{ $product->product_slug }}">
                                                                 {{-- <img class="hover-img" src="{{URL::TO('frontend/images/products/p2.jpg')}}" alt="{{ $product->product_slug }}"> --}}
                                                             </a>
                                                             @endforeach
@@ -197,12 +197,12 @@
                                                                         @csrf
 
                                                                         @if(!empty(Auth::guard('web')->user()->id))
-                                                                        <input type="hidden" name="user_id" value="(){{ Auth::guard('web')->user()->id }}">
+                                                                            <input type="hidden" name="user_id" value="(){{ Auth::guard('web')->user()->id }}">
 
-                                                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
-                                                                        <a type="button" title="Add to cart" onclick="addTocart({{ $product->id }},{{ Auth::user()->id }})">Add to cart</a>
+                                                                            <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                                                            <a type="button" title="Add to cart" onclick="addTocart({{ $product->id }},{{ Auth::user()->id }})">Add to cart</a>
                                                                         @else
-                                                                        <a type="button" title="Add to cart" onclick="addTocart({{ $product->id }})">Add to cart</a>
+                                                                            <a type="button" title="Add to cart" onclick="addTocart({{ $product->id }})">Add to cart</a>
                                                                         @endif
 
                                                                     </form>
@@ -241,7 +241,7 @@
 				<!-- Single Banner  -->
 				<div class="col-lg-6 col-md-6 col-12">
 					<div class="single-banner">
-						<img src="{{URL::TO('frontend/images/mini-banner1.jpg')}}" alt="#">
+						<img src="{{URL::TO('public/frontend/images/mini-banner1.jpg')}}" alt="#">
 						<div class="content">
 							<p>Man's Collectons</p>
 							<h3>Man's items <br>Up to<span> 50%</span></h3>
@@ -253,7 +253,7 @@
 				<!-- Single Banner  -->
 				<div class="col-lg-6 col-md-6 col-12">
 					<div class="single-banner">
-						<img src="{{URL::TO('frontend/images/mini-banner2.jpg')}}" alt="#">
+						<img src="{{URL::TO('public/frontend/images/mini-banner2.jpg')}}" alt="#">
 						<div class="content">
 							<p>shoes women</p>
 							<h3>mid season <br> up to <span>70%</span></h3>
@@ -301,7 +301,7 @@
                                     @endphp
                                     @foreach($hot_product_images as $hot_product_image)
                                         <a href="{{ route('products.show', $hot_product_image->product_slug) }}">
-                                            <img class="default-img" style="width:400px; height:300px;" src="{{asset('backend/img/products/'. $hot_product_image->image)}}" alt="{{ $hot_product->product_slug }}">
+                                            <img class="default-img" style="width:400px; height:300px;" src="{{asset('public/backend/img/products/'. $hot_product_image->image)}}" alt="{{ $hot_product->product_slug }}">
                                             {{-- <img class="hover-img" src="{{URL::TO('frontend/images/products/p2.jpg')}}" alt="#"> --}}
                                             <span class="out-of-stock">Hot</span>
                                         </a>
@@ -395,7 +395,7 @@
                                         $i=1;
                                     @endphp
                                     @foreach($onsale_images as $onsale_image)
-									<img src="{{asset('backend/img/products/'. $onsale_image->image)}}" alt="#">
+									<img src="{{asset('public/backend/img/products/'. $onsale_image->image)}}" alt="#">
                                     @endforeach
 									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
 								</div>
@@ -440,7 +440,7 @@
                                     $i=1;
                                 @endphp
                                 @foreach($best_seller_images as $best_seller_image)
-									<img src="{{asset('backend/img/products/'. $best_seller_image->image)}}" alt="{{ $best_seller->product_slug }}">
+									<img src="{{asset('public/backend/img/products/'. $best_seller_image->image)}}" alt="{{ $best_seller->product_slug }}">
                                 @endforeach
 									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
 								</div>
@@ -470,7 +470,7 @@
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="list-image overlay">
-									<img src="{{URL::TO('frontend/images/list/shop-list7.jpg')}}" alt="#">
+									<img src="{{URL::TO('public/frontend/images/list/shop-list7.jpg')}}" alt="#">
 									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
 								</div>
 							</div>
@@ -488,7 +488,7 @@
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="list-image overlay">
-									<img src="{{URL::TO('frontend/images/list/shop-list8.jpg')}}" alt="#">
+									<img src="{{URL::TO('public/frontend/images/list/shop-list8.jpg')}}" alt="#">
 									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
 								</div>
 							</div>
@@ -506,7 +506,7 @@
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="list-image overlay">
-									<img src="{{URL::TO('frontend/images/list/shop-list9.jpg')}}" alt="#">
+									<img src="{{URL::TO('public/frontend/images/list/shop-list9.jpg')}}" alt="#">
 									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
 								</div>
 							</div>

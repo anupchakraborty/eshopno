@@ -12,7 +12,7 @@
                             @endphp
                             @foreach ($settings as $setting)
                                 <div class="logo">
-                                    <a href="index.html"><img src="{!! asset('backend/img/'.$setting->logo) !!}" alt="#"></a>
+                                    <a href="index.html"><img src="{!! asset('public/backend/img/'.$setting->logo) !!}" alt="#"></a>
                                 </div>
                                 <p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue,  magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
                                 <p class="call">Got Question? Call us 24/7<span><a href="{{ $setting->phone }}">{{ $setting->phone }}</a></span></p>
@@ -87,7 +87,7 @@
 						</div>
 						<div class="col-lg-6 col-12">
 							<div class="right">
-								<img src="{{URL::To('frontend/images/payments.png')}}" alt="#">
+								<img src="{{URL::To('public/frontend/images/payments.png')}}" alt="#">
 							</div>
 						</div>
 					</div>

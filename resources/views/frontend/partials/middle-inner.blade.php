@@ -9,7 +9,7 @@
                                 $settings = App\Models\Setting::all();
                             @endphp
                             @foreach ($settings as $setting)
-							    <a href="/"><img src="{!! asset('backend/img/'.$setting->logo) !!}" alt="logo"></a>
+							    <a href="{{ route('index') }}"><img src="{!! asset('public/backend/img/'.$setting->logo) !!}" alt="logo"></a>
                             @endforeach
 						</div>
 						<!--/ End Logo -->
@@ -64,7 +64,7 @@
                                                 $product_image = App\Models\ProductImage::where('product_id', $cart->product->id)->first();
                                             @endphp
                                             @if($product_image->image > 0)
-											<a class="cart-img" href="{{ route('products.show', $cart->product->product_slug) }}"><img src="{{asset('backend/img/products/'. $product_image->image)}}" alt="#"></a>
+											<a class="cart-img" href="{{ route('products.show', $cart->product->product_slug) }}"><img src="{{asset('public/backend/img/products/'. $product_image->image)}}" alt="#"></a>
                                             @endif
 											<h4><a href="{{ route('products.show', $cart->product->product_slug) }}">{{ $cart->product->product_title }}</a></h4>
 											<p class="quantity">{{ $cart->product_quantity }} -  <span class="amount">{{ $cart->product->buy_price }}</span></p>

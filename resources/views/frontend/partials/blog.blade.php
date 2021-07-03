@@ -12,7 +12,7 @@
 				<div class="col-lg-4 col-md-6 col-12">
 					<!-- Start Single Blog  -->
 					<div class="shop-single-blog">
-						<img src="{{URL::TO('frontend/images/blog1.jpg')}}" alt="#">
+						<img src="{{URL::TO('public/frontend/images/blog1.jpg')}}" alt="#">
 						<div class="content">
 							<p class="date">22 July , 2020. Monday</p>
 							<a href="#" class="title">Sed adipiscing ornare.</a>
@@ -24,7 +24,7 @@
 				<div class="col-lg-4 col-md-6 col-12">
 					<!-- Start Single Blog  -->
 					<div class="shop-single-blog">
-						<img src="{{URL::TO('frontend/images/blog2.jpg')}}" alt="#">
+						<img src="{{URL::TO('public/frontend/images/blog2.jpg')}}" alt="#">
 						<div class="content">
 							<p class="date">22 July, 2020. Monday</p>
 							<a href="#" class="title">Man’s Fashion Winter Sale</a>
@@ -36,7 +36,7 @@
 				<div class="col-lg-4 col-md-6 col-12">
 					<!-- Start Single Blog  -->
 					<div class="shop-single-blog">
-						<img src="{{URL::TO('frontend/images/blog3.jpg')}}" alt="#">
+						<img src="{{URL::TO('public/frontend/images/blog3.jpg')}}" alt="#">
 						<div class="content">
 							<p class="date">22 July, 2020. Monday</p>
 							<a href="#" class="title">Women Fashion Festive</a>
